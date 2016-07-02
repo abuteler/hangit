@@ -1,13 +1,16 @@
 require 'sinatra'
 require './lib/hangit'
 
+
 @@hangit = Hangit.new
 
 get '/' do
-  erb :index
+	erb :index
 end
 
-get '/play' do
-	@@hangit.create_word	
+get '/play' do	
+	if params["input"] == "a" 
+		@@hangit.find_match "a"
+	end
 	erb :play
 end
