@@ -1,6 +1,10 @@
 <html>
 	<body>
-		<%=@@hangit.render_masked%>
+		<span id="word"><%=@@hangit.show_current%></span>
+		<form method="get" action="/play?">
+			<input type="text" name="input" />
+			<input type="submit" value="submit" />
+		</form>
 		<p>Remaining lifes: 5/5</p>
 	</body>
 </html>
