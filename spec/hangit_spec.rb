@@ -7,4 +7,5 @@ describe "Hangit" do
 
 		expect(@hangit.render_masked).to eq "_ _ _ _ _ _ _ _"
 	end
+
 end
