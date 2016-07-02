@@ -6,10 +6,6 @@ When(/^The user starts the game$/) do
   visit '/play'
 end
 
-When(/^The user enters to the game$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
 Then(/^The user should see a welcome message: "(.*?)"$/) do |welcome_msg|
   last_response.body.should =~ /#{welcome_msg}/m
 end
