@@ -1,5 +1,9 @@
 require 'sinatra'
+require './lib/hangit'
 
-get '/' do
+@@hangit = Hangit.new
 
+get '/play' do
+	@@hangit.create_word	
+	erb :play
 end
